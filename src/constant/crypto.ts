@@ -1,0 +1,15 @@
+/**
+ * RSA 公钥（SPKI PEM），用于加密提交的密码。公钥可公开，故直接硬编码；
+ * 私钥只存在后端（RSA_PRIVATE_KEY_PATH 指向的 keys/rsa_private.pem，不进仓库）。
+ * 轮换密钥需同时更新此处与后端私钥文件，并重新构建前端，否则登录/注册会解密失败。
+ */
+export const RSA_PUBLIC_KEY = `-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtwcd+Q9BF1Cp0M/CHHgw
+5EA9uM1W2PtlLRX/usGMS579tquNGeYA6Js4vDTI59oFc3FHXntSKfG2UwYZLSPq
+OKbfB00RwNk9bpy7Anu1LGaWm4Gd6pLxBtzvbQYvNe3TX9/Z7GISEbFUH08UVLu0
+n8TVP33Myhkn1iGBzXEZN8U3JaGTWdfX9C2GT/87olCTi0TbkZdSzKWoLsM6JajL
+xms+fOnm+zQD0XYKR4oVFCGfp8LUDcQhRXMMdKPoc6hFPcC9pPvE14K2eabut/vA
+OERTDmwshhAEHCE5M9y3QKhQbIaQ+CZn8iaAdKqFKW1olqSRMX4OtyEH8Lsw9E24
+fQIDAQAB
+-----END PUBLIC KEY-----
+`
